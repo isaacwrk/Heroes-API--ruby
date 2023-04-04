@@ -3,7 +3,7 @@ class Api::HeroesController < ApplicationController
 
   # GET /heroes
   def index
-    @heroes = Hero.all
+    @heroes = Hero.all.sorted_by_name
 
     render json: @heroes
   end
