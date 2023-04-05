@@ -10,6 +10,6 @@ private
     end
 
     def valid_token?
-        @token.present?
+        @token.present? && @token == Rails.application.credentials.token
     end
 end
